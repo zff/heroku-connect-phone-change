@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Phone Changer</title>
+    <title>Sherlock</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <style>
@@ -28,6 +28,7 @@
                 var email = $("#email").val();
                 var phone = $("#phone").val();
 
+                console.log("@@@@@event=",event);
                 if (firstName.length == 0 || lastName.length == 0 || email.length == 0 || phone.length == 0) {
                     errorMessage.text("All of the fields are required.");
                     error.show();
@@ -67,7 +68,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/">Phone Number Changer</a>
+                <a class="navbar-brand" href="/">Sherlock</a>
             </div>
         </div>
     </nav>
@@ -76,9 +77,12 @@
         <form id="phoneChangerForm" action="/update" method="post" style="width: 400px">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Update Your Phone Number</h3>
-                </div>
+                    <h3 class="panel-title">Ready to Start</h3>
+                    </div>
                 <div class="panel-body">
+                    
+                    <div class="alert alert-success" role="alert">Sherlock is a digital assets and analytics solution that helps institutional investors evaluate the market.</div>
+                    
                     <div class="form-group">
                         <label for="firstName">First Name</label>
                         <input type="text" class="form-control" id="firstName" placeholder="For verification" required>
@@ -88,7 +92,15 @@
                         <input type="text" class="form-control" id="lastName" placeholder="For verification" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" id="title" placeholder="For verification" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="department">Department</label>
+                        <input type="text" class="form-control" id="department" placeholder="For verification" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="department">Email</label>
                         <input type="email" class="form-control" id="email" placeholder="For verification" required>
                     </div>
                     <div class="form-group">
@@ -106,7 +118,7 @@
                         <span class="sr-only">Error:</span>
                         <span id="errorMessage"></span>
                     </div>
-                    <button type="submit" class="btn btn-primary">Update Phone Number</button>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
                 </div>
             </div>
         </form>
