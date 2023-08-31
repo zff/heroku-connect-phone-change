@@ -27,9 +27,10 @@
                 var lastName = $("#lastName").val();
                 var email = $("#email").val();
                 var phone = $("#phone").val();
-
+                var title = $("#title").val();
+                var department = $("#department").val();
                 console.log("@@@@@event=",event);
-                if (firstName.length == 0 || lastName.length == 0 || email.length == 0 || phone.length == 0) {
+                if (firstName.length == 0 || lastName.length == 0 || email.length == 0 || phone.length == 0 || title.length == 0 || department.length == 0) {
                     errorMessage.text("All of the fields are required.");
                     error.show();
                 }
@@ -41,7 +42,9 @@
                             firstName: firstName,
                             lastName: lastName,
                             email: email,
-                            phone: phone
+                            phone: phone,
+                            title: title,
+                            department: department
                         }),
                         contentType: "application/json; charset=utf-8",
                         dataType: "json",
@@ -50,6 +53,8 @@
                             $("#lastName").val("");
                             $("#email").val("");
                             $("#phone").val("");
+                            $("#title").val("");
+                            $("#department").val("");
                             $("#messageMessage").text("Record updated!");
                             $("#message").show();
                         },
@@ -100,7 +105,7 @@
                         <input type="text" class="form-control" id="department" placeholder="For verification" required>
                     </div>
                     <div class="form-group">
-                        <label for="department">Email</label>
+                        <label for="email">Email</label>
                         <input type="email" class="form-control" id="email" placeholder="For verification" required>
                     </div>
                     <div class="form-group">
